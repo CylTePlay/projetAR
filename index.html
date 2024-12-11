@@ -80,7 +80,6 @@
         // Fonction pour choisir le joueur et masquer le pop-up
         function choosePlayer(player) {
             joueurChoisi = player; // Assigner le joueur choisi à la variable globale
-            alert("Vous avez choisi : " + joueurChoisi); // Afficher l'alerte avec le joueur choisi
             document.getElementById("popup").style.display = "none"; // Cacher le pop-up
         }
 
@@ -90,10 +89,18 @@
         }
     </script>
 
-    <a-assets>
-      <img id="m00" src="./img00.png">
+    if getChosenPlayer() == 'Joueur 1' {
+      <a-assets>
+        <img id="m00" src="./img00.1.png">
       
-    </a-assets> 
+      </a-assets> 
+    }
+    if getChosenPlayer() == 'Joueur 2' {
+      <a-assets>
+        <img id="m00" src="./img00.2.png">
+      
+      </a-assets> 
+    }
 
     <a-marker type="barcode" value="0" size="1.5">
       <a-image src="#m00" rotation="90 0 0" width="2" height="2"></a-image>
