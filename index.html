@@ -87,15 +87,23 @@
         function getChosenPlayer() {
             return joueurChoisi;
         }
+
+        // Fonction pour mettre à jour l'image en fonction du joueur choisi
+    function updatePlayerImage() {
+        const chosenPlayer = getChosenPlayer();
+        const imageElement = document.getElementById('m00'); // Get the image element
+        if (chosenPlayer === 'Joueur 1') {
+            imageElement.setAttribute('src', './img00.1.png');
+        } else if (chosenPlayer === 'Joueur 2') {
+            imageElement.setAttribute('src', './img00.2.png');
+        }
+    }
     </script>
+
     <a-assets>
-      if getChosenPlayer() == 'Joueur 1' {
-        <img id="m00" src="./img00.1.png"> 
-      }
-      if getChosenPlayer() == 'Joueur 2' {
-        <img id="m00" src="./img00.2.png"> 
-      }
-    </a-assets> 
+      <!-- Dynamically load the image based on chosen player -->
+      <img id="m00" src="" />
+    </a-assets>
 
     <a-marker type="barcode" value="0" size="1.5">
       <a-image src="#m00" rotation="90 0 0" width="2" height="2"></a-image>
