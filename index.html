@@ -88,19 +88,14 @@
             return joueurChoisi;
         }
     </script>
-
-    if getChosenPlayer() == 'Joueur 1' {
-      <a-assets>
-        <img id="m00" src="./img00.1.png">
-      
-      </a-assets> 
-    }
-    if getChosenPlayer() == 'Joueur 2' {
-      <a-assets>
-        <img id="m00" src="./img00.2.png">
-      
-      </a-assets> 
-    }
+    <a-assets>
+      if getChosenPlayer() == 'Joueur 1' {
+        <img id="m00" src="./img00.1.png"> 
+      }
+      if getChosenPlayer() == 'Joueur 1' {
+        <img id="m00" src="./img00.2.png"> 
+      }
+    </a-assets> 
 
     <a-marker type="barcode" value="0" size="1.5">
       <a-image src="#m00" rotation="90 0 0" width="2" height="2"></a-image>
