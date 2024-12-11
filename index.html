@@ -97,13 +97,9 @@
         } else if (chosenPlayer === 'Joueur 2') {
             imageElement.setAttribute('src', './img00.2.png');
         }
-    }
+      }
+      updatePlayerImage();
     </script>
-
-    <a-assets>
-      <!-- Dynamically load the image based on chosen player -->
-      <img id="m00" src="" />
-    </a-assets>
 
     <a-marker type="barcode" value="0" size="1.5">
       <a-image src="#m00" rotation="90 0 0" width="2" height="2"></a-image>
